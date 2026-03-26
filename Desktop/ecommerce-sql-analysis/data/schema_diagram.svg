@@ -1,0 +1,267 @@
+<svg viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1100" height="720" fill="#0f1117"/>
+  <rect x="0" y="0" width="1100" height="720" fill="url(#bg_grad)" opacity="0.4"/>
+  <defs>
+    <linearGradient id="bg_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f35"/>
+      <stop offset="100%" stop-color="#0d1225"/>
+    </linearGradient>
+    <!-- Table header gradients -->
+    <linearGradient id="hdr_blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="hdr_purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="hdr_teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="hdr_amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="hdr_rose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <linearGradient id="hdr_green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="hdr_indigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="hdr_slate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="550" y="38" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700" letter-spacing="1">Olist E-Commerce · Entity Relationship Diagram</text>
+  <text x="550" y="58" text-anchor="middle" fill="#64748b" font-size="11">8 Tables · Primary Keys (PK) · Foreign Keys (FK)</text>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ORDERS TABLE  (center-left, prominent)    -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="370" y="75" width="210" height="195" rx="8" fill="#1e2540" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="370" y="75" width="210" height="32" rx="8" fill="url(#hdr_blue)"/>
+    <rect x="370" y="95" width="210" height="12" rx="0" fill="url(#hdr_blue)"/>
+    <text x="475" y="96" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">orders</text>
+    <line x1="370" y1="107" x2="580" y2="107" stroke="#2563eb" stroke-width="0.8"/>
+    <text x="382" y="122" fill="#fbbf24" font-size="10" font-weight="600">PK  order_id</text>
+    <text x="382" y="138" fill="#94a3b8" font-size="10">FK  customer_id</text>
+    <text x="382" y="154" fill="#94a3b8" font-size="10">     order_status</text>
+    <text x="382" y="170" fill="#94a3b8" font-size="10">     purchase_timestamp</text>
+    <text x="382" y="186" fill="#94a3b8" font-size="10">     approved_at</text>
+    <text x="382" y="202" fill="#94a3b8" font-size="10">     delivered_carrier_date</text>
+    <text x="382" y="218" fill="#94a3b8" font-size="10">     delivered_customer_date</text>
+    <text x="382" y="234" fill="#94a3b8" font-size="10">     estimated_delivery_date</text>
+    <rect x="370" y="255" width="210" height="15" rx="0" fill="#1a2035"/>
+    <text x="475" y="266" text-anchor="middle" fill="#3b82f6" font-size="9">99,441 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- CUSTOMERS TABLE  (left)                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="100" width="195" height="165" rx="8" fill="#1e2540" stroke="#7c3aed" stroke-width="1.5"/>
+    <rect x="60" y="100" width="195" height="32" rx="8" fill="url(#hdr_purple)"/>
+    <rect x="60" y="120" width="195" height="12" rx="0" fill="url(#hdr_purple)"/>
+    <text x="158" y="121" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">customers</text>
+    <line x1="60" y1="132" x2="255" y2="132" stroke="#7c3aed" stroke-width="0.8"/>
+    <text x="72" y="147" fill="#fbbf24" font-size="10" font-weight="600">PK  customer_id</text>
+    <text x="72" y="163" fill="#94a3b8" font-size="10">     customer_unique_id</text>
+    <text x="72" y="179" fill="#94a3b8" font-size="10">     zip_code_prefix</text>
+    <text x="72" y="195" fill="#94a3b8" font-size="10">     customer_city</text>
+    <text x="72" y="211" fill="#94a3b8" font-size="10">     customer_state</text>
+    <rect x="60" y="252" width="195" height="13" rx="0" fill="#1a2035"/>
+    <text x="158" y="262" text-anchor="middle" fill="#8b5cf6" font-size="9">99,441 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ORDER_ITEMS TABLE  (right of orders)      -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="75" width="200" height="175" rx="8" fill="#1e2540" stroke="#0d9488" stroke-width="1.5"/>
+    <rect x="640" y="75" width="200" height="32" rx="8" fill="url(#hdr_teal)"/>
+    <rect x="640" y="95" width="200" height="12" rx="0" fill="url(#hdr_teal)"/>
+    <text x="740" y="96" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">order_items</text>
+    <line x1="640" y1="107" x2="840" y2="107" stroke="#0d9488" stroke-width="0.8"/>
+    <text x="652" y="122" fill="#fbbf24" font-size="10" font-weight="600">PK  order_id + item_id</text>
+    <text x="652" y="138" fill="#6ee7e7" font-size="10">FK  order_id</text>
+    <text x="652" y="154" fill="#6ee7e7" font-size="10">FK  product_id</text>
+    <text x="652" y="170" fill="#6ee7e7" font-size="10">FK  seller_id</text>
+    <text x="652" y="186" fill="#94a3b8" font-size="10">     price</text>
+    <text x="652" y="202" fill="#94a3b8" font-size="10">     freight_value</text>
+    <text x="652" y="218" fill="#94a3b8" font-size="10">     shipping_limit_date</text>
+    <rect x="640" y="237" width="200" height="13" rx="0" fill="#1a2035"/>
+    <text x="740" y="247" text-anchor="middle" fill="#14b8a6" font-size="9">112,650 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PRODUCTS TABLE  (top right)               -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="860" y="75" width="200" height="185" rx="8" fill="#1e2540" stroke="#d97706" stroke-width="1.5"/>
+    <rect x="860" y="75" width="200" height="32" rx="8" fill="url(#hdr_amber)"/>
+    <rect x="860" y="95" width="200" height="12" rx="0" fill="url(#hdr_amber)"/>
+    <text x="960" y="96" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">products</text>
+    <line x1="860" y1="107" x2="1060" y2="107" stroke="#d97706" stroke-width="0.8"/>
+    <text x="872" y="122" fill="#fbbf24" font-size="10" font-weight="600">PK  product_id</text>
+    <text x="872" y="138" fill="#94a3b8" font-size="10">     category_name</text>
+    <text x="872" y="154" fill="#94a3b8" font-size="10">     name_length</text>
+    <text x="872" y="170" fill="#94a3b8" font-size="10">     description_length</text>
+    <text x="872" y="186" fill="#94a3b8" font-size="10">     photos_qty</text>
+    <text x="872" y="202" fill="#94a3b8" font-size="10">     weight_g</text>
+    <text x="872" y="218" fill="#94a3b8" font-size="10">     dimensions (l/w/h)</text>
+    <rect x="860" y="247" width="200" height="13" rx="0" fill="#1a2035"/>
+    <text x="960" y="257" text-anchor="middle" fill="#f59e0b" font-size="9">32,951 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SELLERS TABLE  (below order_items)        -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="860" y="310" width="200" height="145" rx="8" fill="#1e2540" stroke="#e11d48" stroke-width="1.5"/>
+    <rect x="860" y="310" width="200" height="32" rx="8" fill="url(#hdr_rose)"/>
+    <rect x="860" y="330" width="200" height="12" rx="0" fill="url(#hdr_rose)"/>
+    <text x="960" y="331" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">sellers</text>
+    <line x1="860" y1="342" x2="1060" y2="342" stroke="#e11d48" stroke-width="0.8"/>
+    <text x="872" y="357" fill="#fbbf24" font-size="10" font-weight="600">PK  seller_id</text>
+    <text x="872" y="373" fill="#94a3b8" font-size="10">     zip_code_prefix</text>
+    <text x="872" y="389" fill="#94a3b8" font-size="10">     seller_city</text>
+    <text x="872" y="405" fill="#94a3b8" font-size="10">     seller_state</text>
+    <rect x="860" y="442" width="200" height="13" rx="0" fill="#1a2035"/>
+    <text x="960" y="452" text-anchor="middle" fill="#f43f5e" font-size="9">3,095 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ORDER_PAYMENTS TABLE  (bottom center)     -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="370" y="440" width="210" height="160" rx="8" fill="#1e2540" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="370" y="440" width="210" height="32" rx="8" fill="url(#hdr_green)"/>
+    <rect x="370" y="460" width="210" height="12" rx="0" fill="url(#hdr_green)"/>
+    <text x="475" y="461" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">order_payments</text>
+    <line x1="370" y1="472" x2="580" y2="472" stroke="#16a34a" stroke-width="0.8"/>
+    <text x="382" y="487" fill="#fbbf24" font-size="10" font-weight="600">PK  order_id + seq</text>
+    <text x="382" y="503" fill="#6ee7e7" font-size="10">FK  order_id</text>
+    <text x="382" y="519" fill="#94a3b8" font-size="10">     payment_type</text>
+    <text x="382" y="535" fill="#94a3b8" font-size="10">     payment_installments</text>
+    <text x="382" y="551" fill="#94a3b8" font-size="10">     payment_value</text>
+    <rect x="370" y="586" width="210" height="14" rx="0" fill="#1a2035"/>
+    <text x="475" y="597" text-anchor="middle" fill="#22c55e" font-size="9">103,886 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ORDER_REVIEWS TABLE  (bottom left area)   -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="440" width="210" height="175" rx="8" fill="#1e2540" stroke="#4f46e5" stroke-width="1.5"/>
+    <rect x="60" y="440" width="210" height="32" rx="8" fill="url(#hdr_indigo)"/>
+    <rect x="60" y="460" width="210" height="12" rx="0" fill="url(#hdr_indigo)"/>
+    <text x="165" y="461" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">order_reviews</text>
+    <line x1="60" y1="472" x2="270" y2="472" stroke="#4f46e5" stroke-width="0.8"/>
+    <text x="72" y="487" fill="#fbbf24" font-size="10" font-weight="600">PK  review_id</text>
+    <text x="72" y="503" fill="#6ee7e7" font-size="10">FK  order_id</text>
+    <text x="72" y="519" fill="#94a3b8" font-size="10">     review_score (1–5)</text>
+    <text x="72" y="535" fill="#94a3b8" font-size="10">     review_comment_title</text>
+    <text x="72" y="551" fill="#94a3b8" font-size="10">     review_comment_msg</text>
+    <text x="72" y="567" fill="#94a3b8" font-size="10">     review_creation_date</text>
+    <text x="72" y="583" fill="#94a3b8" font-size="10">     review_answer_date</text>
+    <rect x="60" y="600" width="210" height="15" rx="0" fill="#1a2035"/>
+    <text x="165" y="611" text-anchor="middle" fill="#6366f1" font-size="9">99,224 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- GEOLOCATION TABLE  (bottom right)         -->
+  <!-- ══════════════════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="440" width="200" height="160" rx="8" fill="#1e2540" stroke="#475569" stroke-width="1.5"/>
+    <rect x="640" y="440" width="200" height="32" rx="8" fill="url(#hdr_slate)"/>
+    <rect x="640" y="460" width="200" height="12" rx="0" fill="url(#hdr_slate)"/>
+    <text x="740" y="461" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">geolocation</text>
+    <line x1="640" y1="472" x2="840" y2="472" stroke="#475569" stroke-width="0.8"/>
+    <text x="652" y="487" fill="#fbbf24" font-size="10" font-weight="600">PK  zip_code_prefix</text>
+    <text x="652" y="503" fill="#94a3b8" font-size="10">     geolocation_lat</text>
+    <text x="652" y="519" fill="#94a3b8" font-size="10">     geolocation_lng</text>
+    <text x="652" y="535" fill="#94a3b8" font-size="10">     geolocation_city</text>
+    <text x="652" y="551" fill="#94a3b8" font-size="10">     geolocation_state</text>
+    <rect x="640" y="587" width="200" height="13" rx="0" fill="#1a2035"/>
+    <text x="740" y="597" text-anchor="middle" fill="#94a3b8" font-size="9">1,000,163 rows</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- RELATIONSHIP LINES                                 -->
+  <!-- ══════════════════════════════════════════════════ -->
+
+  <!-- customers → orders  (customer_id) -->
+  <line x1="255" y1="165" x2="370" y2="165" stroke="#8b5cf6" stroke-width="1.8" stroke-dasharray="none"/>
+  <circle cx="255" cy="165" r="4" fill="#8b5cf6"/>
+  <circle cx="370" cy="165" r="4" fill="#2563eb"/>
+  <text x="290" y="158" fill="#8b5cf6" font-size="8">customer_id</text>
+
+  <!-- orders → order_items  (order_id) -->
+  <line x1="580" y1="150" x2="640" y2="150" stroke="#14b8a6" stroke-width="1.8"/>
+  <circle cx="580" cy="150" r="4" fill="#2563eb"/>
+  <circle cx="640" cy="150" r="4" fill="#14b8a6"/>
+  <text x="590" y="144" fill="#14b8a6" font-size="8">order_id</text>
+
+  <!-- order_items → products  (product_id) -->
+  <line x1="840" y1="140" x2="860" y2="140" stroke="#f59e0b" stroke-width="1.8"/>
+  <circle cx="840" cy="140" r="4" fill="#14b8a6"/>
+  <circle cx="860" cy="140" r="4" fill="#f59e0b"/>
+  <text x="840" y="133" fill="#f59e0b" font-size="8">product_id</text>
+
+  <!-- order_items → sellers  (seller_id) -->
+  <line x1="840" y1="170" x2="960" y2="310" stroke="#f43f5e" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <circle cx="840" cy="170" r="4" fill="#14b8a6"/>
+  <circle cx="960" cy="310" r="4" fill="#e11d48"/>
+  <text x="870" y="240" fill="#f43f5e" font-size="8">seller_id</text>
+
+  <!-- orders → order_payments  (order_id) -->
+  <line x1="475" y1="270" x2="475" y2="440" stroke="#22c55e" stroke-width="1.8"/>
+  <circle cx="475" cy="270" r="4" fill="#2563eb"/>
+  <circle cx="475" cy="440" r="4" fill="#22c55e"/>
+  <text x="480" y="362" fill="#22c55e" font-size="8">order_id</text>
+
+  <!-- orders → order_reviews  (order_id) -->
+  <path d="M 370 220 Q 250 340 165 440" stroke="#6366f1" stroke-width="1.8" fill="none" stroke-dasharray="5,3"/>
+  <circle cx="370" cy="220" r="4" fill="#2563eb"/>
+  <circle cx="165" cy="440" r="4" fill="#4f46e5"/>
+  <text x="250" y="340" fill="#6366f1" font-size="8">order_id</text>
+
+  <!-- customers → geolocation  (zip_code) -->
+  <path d="M 165 265 Q 165 400 640 520" stroke="#64748b" stroke-width="1.4" fill="none" stroke-dasharray="4,3"/>
+  <circle cx="165" cy="265" r="3" fill="#8b5cf6"/>
+  <circle cx="640" cy="520" r="3" fill="#64748b"/>
+  <text x="280" y="405" fill="#64748b" font-size="8">zip_code</text>
+
+  <!-- LEGEND -->
+  <rect x="20" y="655" width="430" height="50" rx="6" fill="#1a2035" stroke="#2d3748" stroke-width="1"/>
+  <line x1="35" y1="675" x2="75" y2="675" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="35" cy="675" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="675" r="4" fill="#94a3b8"/>
+  <text x="82" y="679" fill="#94a3b8" font-size="10">Direct FK join</text>
+  <line x1="160" y1="675" x2="200" y2="675" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="160" cy="675" r="4" fill="#94a3b8"/>
+  <circle cx="200" cy="675" r="4" fill="#94a3b8"/>
+  <text x="207" y="679" fill="#94a3b8" font-size="10">Indirect / optional join</text>
+  <rect x="310" y="668" width="12" height="12" rx="2" fill="#fbbf24"/>
+  <text x="327" y="679" fill="#94a3b8" font-size="10">PK — Primary Key</text>
+  <rect x="310" y="686" width="12" height="12" rx="2" fill="#6ee7e7"/>
+  <text x="327" y="697" fill="#94a3b8" font-size="10">FK — Foreign Key</text>
+
+  <!-- Dataset label -->
+  <text x="1080" y="710" text-anchor="end" fill="#334155" font-size="9">Olist Brazilian E-Commerce · Kaggle · 2016–2018</text>
+</svg>
