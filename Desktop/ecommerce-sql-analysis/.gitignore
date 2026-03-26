@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+*.leveldb
+__pycache__/
+*.pyc
+.env
